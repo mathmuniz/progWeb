@@ -1,0 +1,57 @@
+
+.color-selection .container input[value="azul"] + span {
+    background-color: #daf5fa;
+}
+.color-selection .container input[value="verde"] + span {
+    background-color: #d1fecb;
+}
+.color-selection .container input[value="rosa"] + span {
+    background-color: #f6d0f6;
+}
+.color-selection .container input[value="roxo"] + span {
+    background-color: #dcd0f3;
+}
+.color-selection .container input[value="amarelo"] + span {
+    background-color: #fcfccb;
+}
+.color-selection .container input[value="laranja"] + span {
+    background-color: #fbd4b4;
+}
+.color-selection .container input[value="branco"] + span {
+    background-color: #ffffff;
+}
+
+.task-card.azul {
+    background-color: #daf5fa;
+    color: #19b5dc;
+}
+
+.task-card.verde {
+    background-color: #d1fecb;
+    color: #58a51d;
+}
+
+.task-card.rosa {
+    background-color: #f6d0f6;
+    color: #cb65cb;
+}
+
+.task-card.roxo {
+    background-color: #dcd0f3;
+    color: #9763f9;
+}
+
+.task-card.amarelo {
+    background-color: #fcfccb;
+    color: #8f8f69;
+}
+
+.task-card.laranja {
+    background-color: #fbd4b4;
+    color: #ec842e;
+}
+
+.task-card.branco {
+    background-color: #ffffff;
+    color: #727272;
+}

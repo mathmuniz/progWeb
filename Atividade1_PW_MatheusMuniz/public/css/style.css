@@ -1,0 +1,243 @@
+/*Base para o CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height:100%;
+}
+body{
+    padding: 0 30px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+header {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 150px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; 
+    font-size: 24px;
+}
+
+header img{
+    height: 50%;
+}
+
+.archive-selection button {
+    font-family: inherit;
+    font-weight: inherit; 
+    font-size: inherit;
+}
+
+section.page {
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+section.page.add-task > div.add-task, section.page.archiv-title > div.archive-title{
+    display: flex;
+}
+section.page.add-task > div.archive-title, section.page.archive-title > div.add-task{
+    display: none;
+}
+
+section.page > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+section.page > .add-task > .add-task-form {
+    display: none;
+}
+
+.archive-title h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.add-task-button button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #2196F3;
+    height: 100%;
+}
+
+.add-task-button button img {
+    width: 50px;
+}
+
+.add-task-form form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.add-task-form form .field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+form .field input[type="text"] {
+    width: 490px;
+    height: 40px;
+    border-color: #50b6cf;
+    border-radius: 7px;
+    padding: 0 15px;
+    font-size: 18px;
+}
+
+form .field label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000
+}
+
+.add-task-form form button{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    width: 145px;
+    height: 40px;
+    background-color: #50b6cf;
+    font-size: 25px;
+    border-radius: 7px;
+}
+
+.color-selection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;  
+    border-radius: 3px;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #eee;
+    border-radius: inherit;
+    border: 1px solid #000000;
+}
+
+.container input:checked ~ .checkmark {
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+section.tasks {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+section.page.add-task + section.tasks .task-card .header img:hover {
+    cursor: pointer;
+}
+section.page.add-task + section.tasks .task-card.done .archive-delete img:hover {
+    cursor: pointer;
+}
+section.page.archive-title + section.tasks .task-card.done .archive-delete img:hover {
+    cursor: pointer;
+}
+
+.task-card {
+    width: 200px;
+    height: 200px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+.task-card .header {
+    height: 30px;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffa4a3;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    color: #e42c28;
+}
+
+.task-card.done .header{
+    background-color: #b8ff99;
+    color: #2b5a07;
+}
+
+.task-card.done .description {
+    text-decoration: line-through;
+}
+
+.task-card .description {
+    height: 140px;
+    padding: 5px 5px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.task-card .archive-delete {
+    height: 30px;
+    width: 100%;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
