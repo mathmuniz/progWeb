@@ -5,8 +5,86 @@
     <meta charset="UTF-8">        
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./public/assets/favicon.ico">    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/colors.css"> <!-- Separei as cores pra o CSS ficar mais organizado -->
 </head>
 <body>
-    <!-- Seu código deverá estar aqui -->
+    <header>
+        <img src="public/assets/well-organized-logo.png" alt="logo">
+        <div class="archive-selection">
+            <p>
+                <button onclick="changeWindow('add-task')">A fazer</button>
+                <span>|</span>
+                <button onclick="changeWindow('archive-title')">Arquivadas</button>
+            </p>
+        </div>
+    </header>
+
+    <section class="page add-task">
+        <div class="add-task">
+            <div class="add-task-button">
+                <button onclick="changeAddTask()">
+                    <img src="public/assets/task-add-icon.png" alt="add"/>
+                    <span>Adicionar Tarefa</span>
+                </button>
+            </div>
+            <div class="add-task-form">
+                <form action="">
+                    <div class="field">
+                        <label>Descrição</label>
+                        <input type="text" id="description">
+                    </div>
+                    <div class="field">
+                        <label>Cor</label>
+                        <div class="color-selection">
+                            <label class="container">
+                                <input type="checkbox" name="colors" onclick="handleCheckbox(this)" value="azul">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox" name="colors" onclick="handleCheckbox(this)" value="verde">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox" name="colors" onclick="handleCheckbox(this)" value="rosa">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox" name="colors" onclick="handleCheckbox(this)" value="roxo">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox" name="colors" onclick="handleCheckbox(this)" value="amarelo">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox" name="colors" onclick="handleCheckbox(this)" value="laranja">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox" name="colors" onclick="handleCheckbox(this)" value="branco">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <button id="addButton">Adicionar</button>
+                </form>
+            </div>
+        </div>
+        <div class="archive-title">
+            <h2>Tarefas Arquivadas</h2>
+        </div>
+    </section>
+
+    <section class="tasks">
+
+    </section>
+    
+    <script src="public/js/script.js"></script>
 </body>
 </html>
