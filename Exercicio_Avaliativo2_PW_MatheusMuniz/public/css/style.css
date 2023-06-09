@@ -1,0 +1,62 @@
+/*Base para o CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height:100%;
+}
+
+.load-page {
+
+    display: none;
+}
+
+.load-page > div  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+}
+
+.card {
+    margin-bottom: 5px;
+}
+
+.comments .card-title {
+    gap: 20px;
+}
+
+.comments .card-title .avatar {
+    border-radius: 100px;
+}
+
+.comments .card-title img{
+    border-radius: 100px;
+}
+
+.comments .list > .item{
+    display: flex;
+    gap: 5px;  
+    margin-right: 20px;
+}
+
+.comments .list > .item img{
+    width: 25px;
+}
+
+.photos > .card {
+    cursor: pointer !important;
+    margin-right: auto;
+}
+
+.photos > .card:nth-child(4n) {
+    margin-right: 0;
+}
+
+.modal-body img{
+    width: 100%;
+}
